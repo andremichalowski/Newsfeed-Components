@@ -31,7 +31,7 @@
   //   card.append(name);
   //   card.append(sub);
   //   card.append(description);
-  /   // 2- Define HTML structure
+//   /   // 2- Define HTML structure
   //   card.append(cardImg, cardH2, cardP1, cardP2);
   
   //   card.classList.add('card');

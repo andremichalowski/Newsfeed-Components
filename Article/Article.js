@@ -90,7 +90,8 @@ const data = [
 
 /* Step 1: Create a function that creates a component. 
 You will want your component to look like the template below: 
-  
+
+
   <div class="article">
     <h2>{title of the article}</h2>
     <p class="date">{date of the article}</p>
@@ -116,7 +117,74 @@ You will want your component to look like the template below:
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. 
   Refresh the page to see the new article.
 
+
 */
+
+
+//Create Function
+function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph) {
+ // 1. Create HTML markup:
+  const constructorArticle = document.createElement('div');
+  const constructorTitle = document.createElement('h2');
+  const constructorDate = document.createElement('p');
+  const constructorP1 = document.createElement('p');
+  const constructorP2 = document.createElement('p');
+  const constructorP3 = document.createElement('p');
+  const constructorButton = document.createElement('span');
+
+ // 2. Define HTML structure:
+  constructorArticle.append(constructorTitle, constructorDate, constructorP1, constructorP2, constructorP3, constructorButton);
+
+ // 3. Add some class names:
+  constructorArticle.classList.add('article');
+  constructorDate.classList.add('date');
+  constructorButton.classList.add('expandButton');
+
+// 4. Add some content!:
+  constructorTitle.textContent = title;
+  constructorDate.textContent = date;
+  constructorP1.textContent = firstParagraph;
+  constructorP2.textContent = secondParagraph;
+  constructorP3.textContent = thirdParagraph;
+  constructorButton.textContent = 'click here';
+  constructorButton.addEventListener('click', e => {
+    constructorArticle.classList.toggle('article-open');
+  });
+  
+// 5. Return:
+  return constructorArticle;
+}
+
+
+
+
+//-----Append Manual and Loop------
+const body = document.querySelector('body');
+console.log(body);
+// Append Manual:
+  // function appendbody() {
+  //   body.append(createArticle('ttlEx', 'dateEx', 'cntnt1Ex', 'cntnt2Ex', 'cntnt3Ex'));
+  // };
+  // appendbody();
+
+// Append Loop
+  data.forEach((data => {
+        body.append(createArticle(data.title, data.date, data.firstParagraph, data.secondParagraph, data.thirdParagraph));
+      }))
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
 
   // //-----Luis
   // function createCard(title, subtitle, content, imgsrc) {
@@ -130,7 +198,7 @@ You will want your component to look like the template below:
   //   card.append(name);
   //   card.append(sub);
   //   card.append(description);
-  /   // 2- Define HTML structure
+  // /   // 2- Define HTML structure
   //   card.append(cardImg, cardH2, cardP1, cardP2);
   
   //   card.classList.add('card');
