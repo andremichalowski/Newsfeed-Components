@@ -147,10 +147,11 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
   constructorP2.textContent = secondParagraph;
   constructorP3.textContent = thirdParagraph;
   constructorButton.textContent = 'click here';
+  
   constructorButton.addEventListener('click', e => {
     constructorArticle.classList.toggle('article-open');
   });
-  
+
 // 5. Return:
   return constructorArticle;
 }
