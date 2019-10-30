@@ -120,6 +120,8 @@ You will want your component to look like the template below:
 
 */
 
+/* Step 1: Create a function that creates a component. 
+You will want your component to look like the template below: */
 
 //Create Function
 function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph) {
@@ -147,12 +149,15 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
   constructorP2.textContent = secondParagraph;
   constructorP3.textContent = thirdParagraph;
   constructorButton.textContent = 'click here';
-  
+  // Step 2: Add an event listener to the expandButton span. 
+  // This event listener should toggle the class 'article-open' on the 'article' div.
   constructorButton.addEventListener('click', e => {
     constructorArticle.classList.toggle('article-open');
   });
 
-// 5. Return:
+ 
+// 5. Return: 
+//Step 3: return the entire component.
   return constructorArticle;
 }
 
@@ -173,6 +178,30 @@ console.log(body);
         body.append(createArticle(data.title, data.date, data.firstParagraph, data.secondParagraph, data.thirdParagraph));
       }))
 
+
+  
+// Step 4: Map over the data, creating a component for each object 
+// and add each component to the DOM as children of the 'articles' div.
+      //Training kit setting up a new array with map.
+          // 
+          // let newComponents = data.map((arrayItem) => {
+          //   let newButton = buttonCreator(arrayItem);
+          
+          //   // Remember, we always need to return something when we use .map
+          //   return newButton;
+          // });
+      // ...continued.
+          //
+          // newComponents.forEach(component => {
+          //   parent.appendChild(component);
+          // });
+
+
+
+// Step 5: Add a new article to the array. Make sure it is in the same format as the others. 
+// Refresh the page to see the new article.
+
+    
  
 
 
