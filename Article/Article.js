@@ -88,7 +88,8 @@ const data = [
   }
 ];
 
-/* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
+/* Step 1: Create a function that creates a component. 
+You will want your component to look like the template below: 
   
   <div class="article">
     <h2>{title of the article}</h2>
@@ -101,14 +102,54 @@ const data = [
 
   Hint: You will need to use createElement more than once here!
 
-  Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
+  Your function should take either an object as it's one argument, 
+  or 5 separate arguments mapping to each piece of the data object above.
 
-  Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
+  Step 2: Add an event listener to the expandButton span. 
+  This event listener should toggle the class 'article-open' on the 'article' div.
 
   Step 3: return the entire component.
 
-  Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
+  Step 4: Map over the data, creating a component for each oject 
+  and add each component to the DOM as children of the 'articles' div.
 
-  Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
+  Step 5: Add a new article to the array. Make sure it is in the same format as the others. 
+  Refresh the page to see the new article.
 
 */
+
+  // //-----Luis
+  // function createCard(title, subtitle, content, imgsrc) {
+  //   const card = document.createElement('div');
+  //   const image = document.createElement('img');
+  //   const name = document.createElement('h2');
+  //   const sub = document.createElement('p');
+  //   const description = document.createElement('p');
+  
+  //   card.append(image);
+  //   card.append(name);
+  //   card.append(sub);
+  //   card.append(description);
+  /   // 2- Define HTML structure
+  //   card.append(cardImg, cardH2, cardP1, cardP2);
+  
+  //   card.classList.add('card');
+  //   sub.classList.add('subtitle');
+  //   description.classList.add('desc');
+  
+  //   name.textContent = title;
+  //   image.src = imgsrc;
+  //   sub.textContent = subtitle;
+  //   description.textContent = content;
+  
+  //   return card;
+  // }
+  //   //--Append manual and loop--//
+  //   const container = document.querySelector('.container');
+  //   // //Append manual
+  //   container.append(createCard("Octavius Kraken", "Escape Artist", "Super Powers: can shape-shift, instantly change color, communicate using light displays generated on his skin, taste things by touching them, squirt ink and use tools", "https://images.unsplash.com/photo-1564261331932-ea97c182f705?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ" ))
+  //   container.append(createCard("Another", "Anoter", "Sanother", "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"))
+  //   //forEachMethod
+  //   cardData.forEach((card => {
+  //     container.append(createCard(card.title, card.subtitle, card.content, card.imgsrc));
+  //   }))
